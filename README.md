@@ -20,12 +20,6 @@ Es una página web interactiva e individual: el estudiante elige un problema de 
 
 Los links a los apuntes son relativos: los PDF tienen que estar en la misma carpeta que `index.html`.
 
-## Publicar con GitHub Pages
-
-1. Subí todos los archivos a la raíz del repositorio.
-2. En **Settings → Pages**, elegí *Deploy from a branch*, rama `main`, carpeta `/ (root)`.
-3. Esperá un par de minutos. La página queda en `https://<organización>.github.io/<repositorio>/`.
-4. Pegá ese link en la tarea de Moodle.
 
 ## Licencia y créditos
 
