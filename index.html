@@ -93,6 +93,11 @@
 .para-consultar{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line)}
 .nota-pag{margin:0 0 8px;color:var(--muted);font-size:.9rem}
 .consulta a small{font-weight:600}
+.revisar{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.revisar li{display:flex;gap:10px;align-items:baseline;border:1px solid var(--line);border-radius:8px;padding:8px 12px;background:#fff;color:var(--um-blue)}
+.revisar li b{min-width:4.2rem;color:var(--um-blue-2)}
+.revisar li small{margin-left:auto;font-weight:600;color:var(--muted);white-space:nowrap}
+@media (max-width:560px){.revisar li{flex-wrap:wrap}.revisar li small{margin-left:4.2rem}}
 .para-consultar h4{margin:0 0 4px;font-size:.95rem;color:var(--um-blue)}
 @media (max-width:560px){.consulta a{flex-wrap:wrap}.consulta a small{margin-left:4.2rem}}
   /* ===== Pie ===== */
@@ -232,8 +237,7 @@ const PROBLEMAS = [
 
 // Material de consulta por problema: [unidad, página PDF inicial, página PDF final, título].
 // En pantalla se indican las páginas impresas al pie de cada hoja del apunte (en la Unidad 1 el PDF
-// tiene una hoja más de portada, por eso el desfase es 3 y no 2). El link abre el PDF completo.
-const PDFS = {1:"unidad1-magnitudes-mediciones.pdf",2:"unidad2-equilibrio.pdf",3:"unidad3-movimiento.pdf",4:"unidad4-optica-geometrica.pdf"};
+// tiene una hoja más de portada, por eso el desfase es 3 y no 2).
 const OFFSET = {1:3,2:2,3:2,4:2};
 const REFS = {
   1:[[1,5,6,"1.3 Estimaciones y órdenes de magnitud"],[1,12,13,"1.6 Estimaciones y mediciones"],[1,16,18,"Incertezas y cifras significativas"]],
@@ -286,8 +290,8 @@ lista.addEventListener("change", e => {
       '<header><h3>Problema ' + p.n + ' · ' + esc(p.t) + '</h3><p>' + esc(p.u) + ' · ' + esc(p.act) + '</p></header>' +
       '<div class="cuerpo"><p style="margin-top:0">' + esc(p.i) + '</p><ol>' +
       p.q.map(x => '<li>' + esc(x) + '</li>').join("") + '</ol>' +
-      '<div class="para-consultar"><h4>Para consultar en los apuntes</h4><p class="nota-pag">Abrí el PDF de la unidad y revisá estas páginas. Los números son los impresos al pie de cada hoja.</p><ul class="consulta">' +
-      (REFS[p.n] || []).map(r => '<li><a href="' + PDFS[r[0]] + '#page=' + r[1] + '" target="_blank" rel="noopener"><b>Unidad ' + r[0] + '</b>' + esc(r[3]) + '<small>' + paginas(r) + '</small></a></li>').join("") + '</ul></div>' +
+      '<div class="para-consultar"><h4>Para consultar en los apuntes</h4><p class="nota-pag">Abrí el PDF de la unidad desde «Material de consulta» y revisá estas páginas. Los números son los impresos al pie de cada hoja.</p><ul class="revisar">' +
+      (REFS[p.n] || []).map(r => '<li><b>Unidad ' + r[0] + '</b>' + esc(r[3]) + '<small>' + paginas(r) + '</small></li>').join("") + '</ul></div>' +
       '<p class="ok">Quedó registrado como tu problema. Podés cambiarlo cuando quieras.</p></div>';
   }
   panel.hidden = false;
