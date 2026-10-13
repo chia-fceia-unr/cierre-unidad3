@@ -1,0 +1,17 @@
+Resolver un problema de Física con Gemini Notebook
+Actividad de cierre de la Unidad 3 · Herramientas de Inteligencia Artificial
+Facultad de Ciencias Exactas, Ingeniería y Agrimensura – Universidad Nacional de Rosario
+
+Esta obra (la página index.html y su contenido) está bajo la licencia
+Creative Commons Atribución 4.0 Internacional (CC BY 4.0).
+
+Podés copiar, redistribuir y adaptar el material en cualquier medio o formato,
+incluso con fines comerciales, siempre que des crédito adecuado, incluyas un
+enlace a la licencia e indiques si hiciste cambios.
+
+Texto legal completo: https://creativecommons.org/licenses/by/4.0/legalcode.es
+Resumen:              https://creativecommons.org/licenses/by/4.0/deed.es
+
+Excepción: los apuntes en PDF (unidad1 a unidad4) son material de la cátedra
+Introducción a la Física (Departamento de Física y Química, EFB-FCEIA-UNR) y
+los logos pertenecen a la FCEIA y a la UNR. No quedan cubiertos por esta licencia.
